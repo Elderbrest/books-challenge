@@ -8,7 +8,10 @@
   export default {
     name: "Button",
     props: {
-      onClick: Function,
+      onClick: {
+        type: Function,
+        default: () => {}
+      },
       active: {
         type: Boolean,
         default: false
