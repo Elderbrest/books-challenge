@@ -6,7 +6,7 @@
         <span class="rating">({{ book.rating }}/10)</span>
       </div>
       <p class="author">{{ book.author }}</p>
-      <p class="synopsis">{{ book.synopsis }}</p>
+      <p class="synopsis">{{ book.synopsis | truncate(200) }}</p>
       <div class="controls">
         <v-button :active="book.upvoted" />
         <span class="upvote-text">Upvoted {{ book.upvotes }} times</span>
@@ -32,6 +32,15 @@
       index: {
         type: Number,
         required: true
+      }
+    },
+    filters: {
+      truncate: function(value, limit) {
+        if (value.length > limit) {
+          value = value.substring(0, limit) + '...';
+        }
+
+        return value;
       }
     }
   }
