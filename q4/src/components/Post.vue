@@ -2,7 +2,9 @@
   <div class="container">
     <div class="content">
       <div class="title">
-        <h1>{{ index }}. {{ book.title }}</h1>
+        <router-link :to="`/post/${book.slug}`">
+          <h1>{{ index }}. {{ book.title }}</h1>
+        </router-link>
         <span class="rating">({{ book.rating }}/10)</span>
       </div>
       <p class="author">{{ book.author }}</p>
