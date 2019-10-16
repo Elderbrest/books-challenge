@@ -16,17 +16,22 @@
       <p class="synopsis">{{ book.synopsis }}</p>
       <p class="rating">Rating: {{ book.rating }}/10</p>
     </div>
+    <div class="comments">
+      <v-comments />
+    </div>
   </div>
 </template>
 
 <script>
   import { getBookBySlug } from "../api";
   import Button from "./Button";
+  import Comments from "./Comments";
 
   export default {
     name: "Details",
     components: {
-      'v-button': Button
+      'v-button': Button,
+      'v-comments': Comments
     },
     data() {
       return {
@@ -91,6 +96,10 @@
 
     .rating {
       font-weight: bold;
+    }
+
+    .comments {
+      margin: 30px 0;
     }
   }
 </style>
