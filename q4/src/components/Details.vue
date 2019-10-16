@@ -6,10 +6,16 @@
         <span class="author">{{ book.author }}</span>
       </div>
       <div>
-        <span class="upvote-text">Upvoted 8882</span>
+        <span class="upvote-text">Upvoted {{ book.upvotes }} times</span>
         <v-button :active="book.upvoted" />
       </div>
     </header>
+    <img :src="book.cover" alt="book" />
+    <div>
+      <h2>Synopsis</h2>
+      <p class="synopsis">{{ book.synopsis }}</p>
+      <p class="rating">Rating: {{ book.rating }}/10</p>
+    </div>
   </div>
 </template>
 
@@ -61,6 +67,26 @@
       .upvote-text {
         margin: 0 10px;
       }
+    }
+
+    img {
+      border-radius: 12px;
+      display: flex;
+      margin: 30px auto;
+      width: 45%;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .synopsis {
+      margin: 30px 0;
+    }
+
+    .rating {
+      font-weight: bold;
     }
   }
 </style>
