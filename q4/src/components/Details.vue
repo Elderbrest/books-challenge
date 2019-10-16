@@ -10,7 +10,7 @@
         <v-button :active="book.upvoted" />
       </div>
     </header>
-    <img :src="book.cover" alt="book" />
+    <img :src="book.cover || '../assets/book-placeholder.png'" alt="book" />
     <div>
       <h2>Synopsis</h2>
       <p class="synopsis">{{ book.synopsis }}</p>
@@ -46,7 +46,11 @@
 <style scoped lang="scss">
   .container {
     background-color: #ffffff;
+    box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.75);
+    margin: 0 auto;
+    max-width: 1024px;
     padding: 30px;
+    position: relative;
 
     header {
       align-items: flex-start;
