@@ -11,7 +11,7 @@
       <p class="synopsis">{{ book.synopsis | truncate(200) }}</p>
       <div class="controls">
         <v-button :active="book.upvoted" />
-        <span class="text">Upvoted {{ book.upvotes }} times</span>
+        <span class="upvote-text">Upvoted {{ book.upvotes }} times</span>
       </div>
     </div>
     <img :src="book.cover" alt="book" />
@@ -84,7 +84,7 @@
       .controls {
         margin-top: 20px;
 
-        .text {
+        .upvote-text {
           margin: 0 10px;
         }
       }
