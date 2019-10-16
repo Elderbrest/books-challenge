@@ -3,7 +3,7 @@
     <div class="content">
       <div class="title">
         <router-link :to="`/post/${book.slug}`">
-          <h1>{{ index }}. {{ book.title }}</h1>
+          <h1>{{ book.id }}. {{ book.title }}</h1>
         </router-link>
         <span class="rating">({{ book.rating }}/10)</span>
       </div>
@@ -29,10 +29,6 @@
     props: {
       book: {
         type: Object,
-        required: true
-      },
-      index: {
-        type: Number,
         required: true
       }
     },
