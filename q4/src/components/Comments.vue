@@ -47,27 +47,24 @@
         errors: {
           author: false,
           message: false
-        },
-        comments: []
+        }
       }
     },
     methods: {
       handleSubmit: function() {
         if (!this.author.trim().length) {
           this.errors.author = true;
-        }
-
-        if (!this.author.trim().message) {
+        } else if (!this.message.trim().length) {
           this.errors.message = true;
+        } else {
+          this.comments.push({
+            author: this.author,
+            message: this.message,
+            slug: this.$route.params.slug
+          });
+          this.author = '';
+          this.message = '';
         }
-
-        this.comments.push({
-          author: this.author,
-          message: this.message,
-          slug: this.$route.params.slug
-        });
-        this.author = '';
-        this.message = '';
       }
     },
     computed: {
