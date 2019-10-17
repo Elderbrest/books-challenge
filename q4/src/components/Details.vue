@@ -4,6 +4,9 @@
       <div>
         <h1>Details page: {{ book.title }}</h1>
         <span class="author">{{ book.author }}</span>
+        <p class="back">
+          <router-link to="/">Back to listing</router-link>
+        </p>
       </div>
       <div>
         <span class="upvote-text">Upvoted {{ book.upvotes }} times</span>
@@ -71,6 +74,11 @@
       .author {
         color: #5b5b5b;
         margin: 10px 0;
+      }
+
+      .back {
+        margin: 10px 0;
+        text-decoration: underline;
       }
 
       .upvote-text {
