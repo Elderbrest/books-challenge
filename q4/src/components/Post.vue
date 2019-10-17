@@ -14,7 +14,11 @@
         <span class="upvote-text">Upvoted {{ book.upvotes }} times</span>
       </div>
     </div>
-    <img :src="book.cover" alt="book" />
+    <div class="image-container">
+      <router-link :to="`/post/${book.slug}`">
+        <img :src="book.cover" alt="book" />
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -86,10 +90,11 @@
       }
     }
 
-    img {
+    .image-container {
       border-radius: 12px;
       margin-left: 30px;
       max-width: 15%;
+      overflow: hidden;
     }
   }
 </style>
