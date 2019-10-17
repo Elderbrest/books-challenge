@@ -52,6 +52,7 @@
 </script>
 
 <style scoped lang="scss">
+  @import '../sass/abstracts/mixins';
   .container {
     background-color: #ffffff;
     box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.75);
@@ -64,6 +65,10 @@
       align-items: flex-start;
       display: flex;
       justify-content: space-between;
+
+      @include md {
+        flex-direction: column;
+      }
 
       h1 {
         color: #a97721;
@@ -83,6 +88,10 @@
 
       .upvote-text {
         margin: 0 10px;
+
+        @include md {
+          margin: 0 10px 0 0;
+        }
       }
     }
 

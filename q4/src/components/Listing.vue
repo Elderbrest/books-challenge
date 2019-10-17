@@ -80,11 +80,17 @@
 </script>
 
 <style scoped lang="scss">
+  @import "../sass/abstracts/mixins";
+
   .container {
     box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.75);
     margin: 0 auto;
     max-width: 1024px;
     position: relative;
+
+    @include lg {
+      width: 100%;
+    }
 
     h1 {
       color: #dcaa43;
@@ -92,6 +98,11 @@
       padding: 30px 0;
       font-size: 4rem;
       font-weight: bold;
+
+      @include lg {
+        font-size: 2.5rem;
+        padding: 50px 0 15px 0;
+      }
     }
 
     .search {
@@ -102,6 +113,15 @@
       position: absolute;
       right: 0;
       top: 0;
+
+      @include md {
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0px 4px 16px -6px rgba(0,0,0,0.75);
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+      }
     }
 
     ul {

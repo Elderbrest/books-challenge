@@ -49,9 +49,15 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "../sass/abstracts/mixins";
+
   .container {
     display: flex;
     padding: 30px;
+
+    @include md {
+      flex-direction: column-reverse;
+    }
 
     .content {
       display: flex;
@@ -95,6 +101,11 @@
       margin-left: 30px;
       max-width: 15%;
       overflow: hidden;
+
+      @include md {
+        margin: 0 auto 30px auto;
+        max-width: 30%;
+      }
     }
   }
 </style>
