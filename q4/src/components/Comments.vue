@@ -2,7 +2,7 @@
   <div>
     <h2>Comments</h2>
     <ul>
-      <li v-for="comment in componentsBySlug">
+      <li v-for="comment in comments">
         <p class="author">{{ comment.author }}</p>
         <p class="message">{{ comment.message }}</p>
       </li>
@@ -51,25 +51,30 @@
       }
     },
     methods: {
-      handleSubmit: function() {
+      handleSubmit() {
         if (!this.author.trim().length) {
           this.errors.author = true;
         } else if (!this.message.trim().length) {
           this.errors.message = true;
         } else {
-          this.comments.push({
+          this.$store.commit({
+            type: 'addComment',
             author: this.author,
             message: this.message,
             slug: this.$route.params.slug
           });
-          this.author = '';
-          this.message = '';
+
+          this.cleanFields();
         }
+      },
+      cleanFields() {
+        this.author = '';
+        this.message = '';
       }
     },
     computed: {
-      componentsBySlug: function() {
-        return this.comments.filter(comment => comment.slug === this.$route.params.slug);
+      comments() {
+        return this.$store.getters.getCommentsBySlug(this.$route.params.slug);
       }
     }
   }
