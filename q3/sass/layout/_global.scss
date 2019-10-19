@@ -1,0 +1,11 @@
+@import "../abstracts/variables";
+
+body {
+  background-color: $beige-color;
+  margin: 0 auto;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
