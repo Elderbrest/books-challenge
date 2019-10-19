@@ -1,0 +1,91 @@
+@import "../abstracts/variables";
+
+.main {
+  padding-bottom: 80px;
+
+  .container {
+    border-radius: $base-border-radius;
+    box-shadow: $base-box-shadow;
+    overflow: hidden;
+
+    h1 {
+      background-color: #ffffff;
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .featured-book {
+      flex-direction: row;
+      padding: 30px;
+      position: relative;
+
+      .recommended {
+        background-color: $gold-color;
+        border-radius: 0 0 0 10px;
+        color: #ffffff;
+        padding: 6px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      img {
+        border-radius: $base-border-radius;
+        box-shadow: $base-box-shadow;
+      }
+
+      .book-info {
+        margin-left: 30px;
+
+        .title {
+          margin: 0;
+        }
+      }
+    }
+
+    .top-voted {
+      background-color: #ffffff;
+      padding: 30px;
+
+      .books-list {
+        flex-direction: row;
+
+        .book {
+          background-color: $beige-color;
+          border-radius: $base-border-radius;
+          justify-content: flex-start;
+          padding: 20px;
+          position: relative;
+
+          &:not(:first-child) {
+            margin-left: 30px
+          }
+
+          .position {
+            align-items: center;
+            border: 2px solid $gold-color;
+            border-radius: 50%;
+            color: $gold-color;
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 30px;
+          }
+
+          img {
+            border-radius: $base-border-radius;
+            box-shadow: $base-box-shadow;
+            margin: 0 auto;
+            width: 120px;
+          }
+        }
+      }
+    }
+  }
+}
