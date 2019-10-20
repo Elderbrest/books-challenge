@@ -1,3 +1,4 @@
+@import "../abstracts/mixins";
 @import "../abstracts/variables";
 
 .main {
@@ -63,16 +64,27 @@
 
       .books-list {
         flex-direction: row;
+        flex-wrap: wrap;
 
         .book {
           background-color: $beige-color;
           border-radius: $base-border-radius;
+          flex: 1;
           justify-content: flex-start;
           padding: 20px;
           position: relative;
 
+          @include lg {
+            flex-basis: 100%;
+            margin-bottom: 30px;
+          }
+
           &:not(:first-child) {
-            margin-left: 30px
+            margin-left: 30px;
+
+            @include lg {
+              margin: 0 0 30px 0;
+            }
           }
 
           .position {
