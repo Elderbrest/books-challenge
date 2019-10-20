@@ -35,19 +35,31 @@
         border-radius: $base-border-radius;
         box-shadow: $base-box-shadow;
       }
+    }
 
-      .book-info {
-        margin-left: 30px;
+    .book-info {
+      margin-left: 30px;
 
-        .title {
-          margin: 0;
-        }
+      .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .author {
+        margin: 10px 0 20px 0;
       }
     }
 
     .top-voted {
       background-color: #ffffff;
       padding: 30px;
+
+      h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0 0 30px 0;
+      }
 
       .books-list {
         flex-direction: row;
@@ -81,7 +93,7 @@
           img {
             border-radius: $base-border-radius;
             box-shadow: $base-box-shadow;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             width: 120px;
           }
         }
