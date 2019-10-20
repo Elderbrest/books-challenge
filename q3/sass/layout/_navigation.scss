@@ -1,3 +1,4 @@
+@import "../abstracts/mixins";
 @import "../abstracts/variables";
 
 .top {
@@ -8,6 +9,10 @@
       flex-direction: row;
       justify-content: space-between;
       padding: 30px;
+
+      @include sm {
+        flex-direction: column;
+      }
     }
   }
 
@@ -26,9 +31,17 @@
       margin: 0;
       padding: 0;
 
+      @include sm {
+        flex-direction: column;
+      }
+
       li {
         cursor: pointer;
         margin-left: 20px;
+
+        @include sm {
+          margin: 20px 0 0 0;
+        }
 
         &:nth-child(3) {
           background-color: $gold-color;
