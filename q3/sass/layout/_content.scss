@@ -15,12 +15,20 @@
       font-weight: bold;
       margin: 0;
       padding: 30px;
+
+      @include lg {
+        text-align: center;
+      }
     }
 
     .featured-book {
       flex-direction: row;
       padding: 30px;
       position: relative;
+
+      @include lg {
+        flex-direction: column;
+      }
 
       .recommended {
         background-color: $gold-color;
@@ -35,11 +43,24 @@
       img {
         border-radius: $base-border-radius;
         box-shadow: $base-box-shadow;
+
+        @include lg {
+          margin: 20px auto;
+          width: 40%;
+        }
+
+        @include md {
+          width: 60%;
+        }
       }
     }
 
     .book-info {
       margin-left: 30px;
+
+      @include lg {
+        margin: 0;
+      }
 
       .title {
         font-size: 1.5rem;
@@ -60,6 +81,10 @@
         font-size: 2rem;
         font-weight: bold;
         margin: 0 0 30px 0;
+
+        @include lg {
+          text-align: center;
+        }
       }
 
       .books-list {
@@ -107,6 +132,15 @@
             box-shadow: $base-box-shadow;
             margin: 0 auto 20px auto;
             width: 120px;
+
+            @include lg {
+              margin: 20px auto;
+              width: 40%;
+            }
+
+            @include md {
+              width: 60%;
+            }
           }
         }
       }
