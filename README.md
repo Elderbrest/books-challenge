@@ -6,19 +6,50 @@ You can submit all the answers to this assignment in a single repository (or as 
 
 Tell us about one of your commercial projects with Vue.js or AngularJS.
 
+````
+The project is called Symsala. It's dedicated to provide / search different services, such as
+guitar lessons, pet walking, babysitting, etc. The project is supposed to help people
+especially from countries with high unemployment.
+Core stack is Vue / Vuex. Styling - vuetify. For the moment there is no SSR, but NUXT
+is planned for the future.
+````
 
 ## 2. General
 
 ##### 2.1. What kind of front end projects do you enjoy working on? Why?
+````
+PWA / SPA. I like to plan architecture, what kind of reusable components I need to
+create, that I could use them in future.
+Eye catching designs with animation.
+````
 
 ##### 2.2. Which are your favorite features of HTML5? How have you used them before?
+````
+One of the last interesting features is picture tag, solves some responsive issues.
+````
 
 ##### 2.3. Explain the difference between creating a DOM element setting `innerHTML` and using `createElement`.
+````
+In case of innerHTML, replaced DOM elements loose attached events, also all
+references to these elements will be lost. 
+Regarding performance - almost no difference.
+Regarding security - XSS vulnerability
+````
 
 ##### 2.4. Compare two-way data binding vs one-way data flow.
+````
+In case of 2-way binding - there are 2 watchers: one listens changes from UI, another
+one from code. Example: Vue, Angular
+
+In case of 1-way binding - 1 watcher, where UI is the single source of truth. Example:
+React
+````
 
 ##### 2.5. Why is asynchronous programming important in JavaScript?
-
+````
+Realtime projects is one of the best examples, where asynchronous programming can be
+used. Non-blocking IO allows to write async code.
+````
 
 ## 3. Styling
 
@@ -33,6 +64,13 @@ Given the HTML file **front-end/q3/q3.html**, implement the styling so the page 
 - The footer should stick to the bottom when scrolling.
 - You can, and should, use a CSS pre-processor, such as SASS or LESS.
 
+___
+
+### Solution
+
+- Go to folder `q3`
+- Install all dependencies via ```npm install``` or `yarn install`
+- Compile styles, using `npm run build`
 
 ## 4. SPA
 
