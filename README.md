@@ -55,7 +55,7 @@ used. Non-blocking IO allows to write async code.
 
 Given the HTML file **front-end/q3/q3.html**, implement the styling so the page matches the image below.
 
-![Styling](./front-end/q3/images/result.jpg "Styling")
+![Styling](./q3/images/result.jpg "Styling")
 
 #### Bonus
 - Implement styling rules that consider different screen sizes.
