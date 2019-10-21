@@ -84,7 +84,7 @@ Display all available books returned from the API.
 - Book's title and cover should link to the book's individual page.
 - Though the upvote functionality is not required, the upvote state should be represented.
 
-![Books list](./q3/images/books-list.png "Books list")
+![Books list](./q4/images/books-list.png "Books list")
 
 
 ### Book page
